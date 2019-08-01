@@ -1,7 +1,6 @@
-FROM maven:3.3-jdk-8
+FROM maven:3.6.1-jdk-8
 
-VOLUME /tmp
-
+#VOLUME /tmp
 WORKDIR /code
 
 # Prepare by downloading dependencies
