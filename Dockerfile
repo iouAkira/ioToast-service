@@ -1,5 +1,7 @@
 FROM maven:3.6.1-jdk-8
 
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone
+
 VOLUME /tmp
 
 WORKDIR /code
