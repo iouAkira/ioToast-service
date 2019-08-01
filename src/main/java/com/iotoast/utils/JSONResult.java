@@ -21,17 +21,12 @@ public class JSONResult {
 
     // 定义jackson对象
     private static final ObjectMapper MAPPER = new ObjectMapper();
-
     // 响应业务状态
     private Integer status;
-
     // 响应消息
     private String msg;
-
     // 响应中的数据
     private Object data;
-
-    private String ok;    // 不使用
 
     public static JSONResult build(Integer status, String msg, Object data) {
         return new JSONResult(status, msg, data);
@@ -65,9 +60,6 @@ public class JSONResult {
 
     }
 
-//    public static LeeJSONResult build(Integer status, String msg) {
-//        return new LeeJSONResult(status, msg, null);
-//    }
 
     public JSONResult(Integer status, String msg, Object data) {
         this.status = status;
@@ -79,10 +71,6 @@ public class JSONResult {
         this.status = 200;
         this.msg = "OK";
         this.data = data;
-    }
-
-    public Boolean isOK() {
-        return this.status == 200;
     }
 
     public Integer getStatus() {
@@ -172,13 +160,4 @@ public class JSONResult {
             return null;
         }
     }
-
-    public String getOk() {
-        return ok;
-    }
-
-    public void setOk(String ok) {
-        this.ok = ok;
-    }
-
 }
