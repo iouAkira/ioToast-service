@@ -1,5 +1,7 @@
 FROM maven:3.6.1-jdk-8
 
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone
+
 VOLUME /tmp
 
 WORKDIR /code
@@ -15,7 +17,7 @@ RUN ["mvn", "clean", "package"]
 
 RUN ["ls", "/code/target"]
 RUN ["pwd"]
-RUN ["ls", "-ltrh", "/code/target/iotoast-*.jar"]
+RUN ["ls", "-ltrh", "/code/target/iotoast-0.0.1.jar"]
 
 EXPOSE 8080
 
