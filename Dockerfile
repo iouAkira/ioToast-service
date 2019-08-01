@@ -19,6 +19,6 @@ RUN ["ls", "/code/target"]
 RUN ["pwd"]
 RUN ["ls", "-ltrh", "/code/target/iotoast-0.0.1.jar"]
 
-EXPOSE 8080
+EXPOSE 1990
 
-ENTRYPOINT [ "java", "-jar", "/code/target/iotoast-*.jar" ]
+ENTRYPOINT [ "java", "-jar", "/code/target/iotoast-0.0.1.jar" ]
