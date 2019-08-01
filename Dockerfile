@@ -15,8 +15,8 @@ RUN ["mvn", "clean", "install"]
 
 RUN ["ls", "/code/target"]
 RUN ["pwd"]
-RUN ["ls", "-ltrh", "/code/target/myspringboot.jar"]
+RUN ["ls", "-ltrh", "/code/target/iotoast-*.jar"]
 
 EXPOSE 8080
 
-ENTRYPOINT [ "java", "-jar", "/code/target/ioToast.jar" ]
+ENTRYPOINT [ "java", "-jar", "/code/target/iotoast-*.jar" ]

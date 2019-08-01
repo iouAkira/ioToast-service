@@ -1,0 +1,8 @@
+iotoast_service:
+  image: akyakya/iotoast:latest
+  container_name: iotoast
+  restart: always
+  volumes:
+    - ./prod.properties:/code/prod.properties
+    - /etc/localtime:/etc/localtime:ro
+    - /etc/timezone:/etc/timezone:ro
