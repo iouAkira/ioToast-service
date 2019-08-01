@@ -12,10 +12,11 @@
     <artifactId>iotoast</artifactId>
     <version>0.0.1</version>
     <name>ioToast</name>
-    <description>Demo project for Spring Boot</description>
+    <description>ioToast service project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
+        <start-class>com.iotoast.Application</start-class>
     </properties>
 
     <dependencies>
