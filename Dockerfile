@@ -15,7 +15,7 @@ RUN ["mvn", "clean", "package"]
 
 RUN ["ls", "/code/target"]
 RUN ["pwd"]
-RUN ["ls", "-ltrh", "/code/target/iotoast-*.jar"]
+RUN ["ls", "-ltrh", "/code/target/iotoast-0.0.1.jar"]
 
 EXPOSE 8080
 
