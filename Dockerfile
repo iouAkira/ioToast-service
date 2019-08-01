@@ -11,6 +11,8 @@ ADD pom.xml /code/pom.xml
 RUN ["mvn", "dependency:resolve"]
 RUN ["mvn", "verify"]
 
+RUN ["APPV=$(mvn -q help:evaluate -Dexpression=project.version -DforceStdout=true)","echo","$APPV"]
+
 # Adding source, compile and package into a fat jar
 ADD src /code/src
 RUN ["mvn", "clean", "package"]
