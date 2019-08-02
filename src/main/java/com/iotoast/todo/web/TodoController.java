@@ -1,6 +1,9 @@
 package com.iotoast.todo.web;
 
 import com.iotoast.todo.pojo.Todo;
+import com.iotoast.utils.Resource;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +17,9 @@ import java.util.UUID;
 @RestController
 @RequestMapping(value = "/todo")
 public class TodoController {
+
+    @Autowired
+    private Resource resource;
 
     /**
      * 获取所有TodoList
@@ -33,6 +39,13 @@ public class TodoController {
             todos.add(todo);
         }
         return JSONResult.ok(todos);
+    }
+
+    @RequestMapping(value = "/resource")
+    public JSONResult getResource() {
+        Resource bean = new Resource();
+        BeanUtils.copyProperties(resource, bean);
+        return JSONResult.ok(bean);
     }
 
     /**
