@@ -16,4 +16,4 @@ RUN ["ls", "/code/target"]
 
 EXPOSE 1990
 
-ENTRYPOINT [ "java", "-jar", "/code/target/iotoast-0.0.1.jar" ]
+ENTRYPOINT [ "java", "-jar", "/code/target/iotoast.jar" ]
