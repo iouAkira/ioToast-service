@@ -1,3 +1,4 @@
 # ioToast-service
 ## Docker image
-[![](https://images.microbadger.com/badges/version/akyakya/iotoast-service.svg)](https://microbadger.com/images/akyakya/iotoast-service "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/akyakya/iotoast-service.svg)](https://microbadger.com/images/akyakya/iotoast-service "Get your own image badge on microbadger.com") [(Dockerfile)](https://github.com/ioToast/ioToast-service/blob/master/Dockerfile)
+![Automated build](https://img.shields.io/docker/cloud/automated/akyakya/iotoast-service?style=for-the-badge)![Build Status](https://img.shields.io/docker/cloud/build/akyakya/iotoast-service?label=&style=for-the-badge) ![MicroBadger Size (tag)](https://img.shields.io/microbadger/image-size/akyakya/iotoast-service/latest?style=for-the-badge) ![Docker Pulls](https://img.shields.io/docker/pulls/akyakya/iotoast-service?style=for-the-badge)
+
