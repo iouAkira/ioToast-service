@@ -3,10 +3,12 @@ package com.iotoast.utils;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Component;
 
 @Configuration
-@ConfigurationProperties(prefix = "com.iotoast.opensource")
-@PropertySource(value = "classpath:resource.properties")
+@ConfigurationProperties(prefix = "com.iotoast.opensource", ignoreUnknownFields = false)
+@PropertySource("classpath:config/resource.properties")
+@Component
 public class Resource {
     private String name;
 
