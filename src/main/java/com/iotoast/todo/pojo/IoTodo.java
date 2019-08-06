@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.util.Date;
 
-public class Todo {
+public class IoTodo {
 
 //    @JsonIgnore
     private String id;
