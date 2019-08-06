@@ -1106,26 +1106,3 @@ Caused by: java.sql.SQLNonTransientConnectionException: Public Key Retrieval is 
 2019-08-06 14:48:51.095  INFO 99534 --- [http-nio-1990-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2019-08-06 14:48:51.096  INFO 99534 --- [http-nio-1990-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2019-08-06 14:48:51.109  INFO 99534 --- [http-nio-1990-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2019-08-06 15:00:14.573  INFO 3398 --- [restartedMain] com.iotoast.Application                  : Starting Application on AkiradeMacBook-Pro.local with PID 3398 (/Users/akira/IdeaProjects/ioToast-service/target/classes started by akira in /Users/akira/IdeaProjects/ioToast-service)
-2019-08-06 15:00:14.576  INFO 3398 --- [restartedMain] com.iotoast.Application                  : No active profile set, falling back to default profiles: default
-2019-08-06 15:00:14.621  INFO 3398 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-08-06 15:00:14.622  INFO 3398 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-08-06 15:00:15.979  INFO 3398 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$dee4b23a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-06 15:00:15.988  INFO 3398 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5f646508] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-06 15:00:16.388  INFO 3398 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 1990 (http)
-2019-08-06 15:00:16.410  INFO 3398 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-06 15:00:16.411  INFO 3398 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-06 15:00:16.489  INFO 3398 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2019-08-06 15:00:16.489  INFO 3398 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1867 ms
-2019-08-06 15:00:16.656  INFO 3398 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2019-08-06 15:00:28.162  INFO 3398 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2019-08-06 15:00:28.790  INFO 3398 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-06 15:00:28.987  WARN 3398 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-08-06 15:00:29.299  INFO 3398 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-08-06 15:00:29.365  INFO 3398 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 1990 (http) with context path '/api'
-2019-08-06 15:00:29.368  INFO 3398 --- [restartedMain] com.iotoast.Application                  : Started Application in 15.168 seconds (JVM running for 16.595)
-2019-08-06 15:00:36.396  INFO 3398 --- [http-nio-1990-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-06 15:00:36.397  INFO 3398 --- [http-nio-1990-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-06 15:00:36.412  INFO 3398 --- [http-nio-1990-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
-2019-08-06 15:33:22.574  INFO 3398 --- [Thread-40] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-08-06 15:33:22.616  INFO 3398 --- [Thread-40] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
