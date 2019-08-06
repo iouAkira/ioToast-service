@@ -11,7 +11,7 @@ RUN ["mvn", "dependency:resolve","verify"]
 
 # Adding source, compile and package into a fat jar
 ADD src /code/src
-RUN ["cp", "/code/src/main/resource/application.properties", "/code/app-prod.properties"]
+RUN ["cp", "/code/src/main/resources/application.properties", "/code/app-prod.properties"]
 RUN ["mvn", "clean", "package"]
 RUN ["ls", "/code", "/code/target"]
 
