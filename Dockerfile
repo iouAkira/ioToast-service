@@ -11,9 +11,10 @@ RUN ["mvn", "dependency:resolve","verify"]
 
 # Adding source, compile and package into a fat jar
 ADD src /code/src
+RUN ["cp", "/code/src/main/resource/application.properties", "/code/app-prod.properties"]
 RUN ["mvn", "clean", "package"]
-RUN ["ls", "/code/target"]
+RUN ["ls", "/code", "/code/target"]
 
 EXPOSE 1990
 
-ENTRYPOINT [ "java", "-jar", "/code/target/iotoast.jar" ]
+ENTRYPOINT [ "java", "-jar","-Dspring.config.location=/code/app-prod.properties", "/code/target/iotoast.jar" ]
