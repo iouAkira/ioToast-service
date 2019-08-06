@@ -3,6 +3,6 @@ iotoast_service:
   container_name: iotoast
   restart: always
   volumes:
-    - ./prod.properties:/code/prod.properties
+    - $(pwd)/app-prod.properties:/code/app-prod.properties
     - /etc/localtime:/etc/localtime:ro
     - /etc/timezone:/etc/timezone:ro
