@@ -1,6 +1,7 @@
 package com.iotoast.todo.web;
 
-import com.iotoast.todo.pojo.Todo;
+import com.iotoast.todo.pojo.IoTodo;
+import com.iotoast.todo.service.TodoService;
 import com.iotoast.utils.Resource;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,25 +20,28 @@ import java.util.UUID;
 public class TodoController {
 
     @Autowired
-    private Resource resource;
+    Resource resource;
+    @Autowired
+    TodoService todoService;
 
     /**
      * 获取所有TodoList
      **/
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public JSONResult getAllTodo() {
-        List<Todo> todos = new ArrayList<Todo>();
-        for (int i = 0; i < 6; i++) {
-            Todo todo = new Todo();
-            todo.setId(UUID.randomUUID().toString());
-            todo.setGroupId(UUID.randomUUID().toString());
-            todo.setTagId(UUID.randomUUID().toString());
-            todo.setTitle("这是一条待办事项" + i);
-            todo.setContent("这是一条待办事项说明" + i);
-            todo.setCreator("Akira" + i);
-            todo.setCreateTime(new Date());
-            todos.add(todo);
-        }
+        List<IoTodo> todos = new ArrayList<IoTodo>();
+//        for (int i = 0; i < 6; i++) {
+//            IoTodo todo = new IoTodo();
+//            todo.setId(UUID.randomUUID().toString());
+//            todo.setGroupId(UUID.randomUUID().toString());
+//            todo.setTagId(UUID.randomUUID().toString());
+//            todo.setTitle("这是一条待办事项" + i);
+//            todo.setContent("这是一条待办事项说明" + i);
+//            todo.setCreator("Akira" + i);
+//            todo.setCreateTime(new Date());
+//            todos.add(todo);
+//        }
+        todos = todoService.findAllTodo();
         return JSONResult.ok(todos);
     }
 

@@ -1,6 +1,6 @@
 package com.iotoast.todo.mapper;
 
-import com.iotoast.todo.pojo.Todo;
+import com.iotoast.todo.pojo.IoTodo;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -12,14 +12,14 @@ public interface TodoDao {
      * @return todo信息
      */
     @Select("SELECT * FROM todo WHERE id = #{id}")
-    Todo findTodoById(@Param("id") String id);
+    IoTodo findTodoById(@Param("id") String id);
 
     /**
      * 查询所有的todo
      * @return 返回所有todo
      */
-    @Select("SELECT * FROM todo ")
-    List<Todo> findAllTodo();
+    @Select("SELECT * FROM io_todo ")
+    List<IoTodo> findAllTodo();
 
 
     /**

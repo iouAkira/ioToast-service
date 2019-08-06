@@ -4,7 +4,7 @@
 
 <mapper namespace="com.iotoast.todo.service.TodoDao">
 
-    <select id="findTodoById" parameterType="String" resultType="com.iotoast.todo.pojo.Todo">
+    <select id="findTodoById" parameterType="String" resultType="com.iotoast.todo.pojo.IoTodo">
         SELECT * FROM ioTodo WHERE id = #{id}
     </select>
 </mapper>
