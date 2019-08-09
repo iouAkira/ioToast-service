@@ -5,9 +5,7 @@ import com.iotoast.todo.service.TodoService;
 import com.iotoast.utils.Resource;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import com.iotoast.utils.JSONResult;
 
 import java.util.ArrayList;
@@ -56,7 +54,8 @@ public class TodoController {
      * 增加一条Todo
      **/
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public JSONResult addTodo() {
+    public JSONResult addTodo(@RequestBody IoTodo todo) {
+        todoService.insertTodo(todo);
         return JSONResult.ok();
     }
 
@@ -74,5 +73,11 @@ public class TodoController {
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public JSONResult updateTodo() {
         return JSONResult.ok();
+    }
+
+    @RequestMapping(value = "/findOne", method = RequestMethod.GET)
+    public JSONResult findOne(@RequestParam String id) {
+        IoTodo todo = todoService.findTodoById(id);
+        return JSONResult.ok(todo);
     }
 }

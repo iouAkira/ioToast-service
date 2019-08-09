@@ -11,7 +11,7 @@ public interface TodoDao {
      * 通过ID查询todo信息
      * @return todo信息
      */
-    @Select("SELECT * FROM todo WHERE id = #{id}")
+    @Select("SELECT * FROM io_todo WHERE id = #{id}")
     IoTodo findTodoById(@Param("id") String id);
 
     /**
@@ -25,9 +25,9 @@ public interface TodoDao {
     /**
      * 新增一条todo
      */
-    @Insert("INSERT INTO todo(id,tagId,groupId,createTime,remindTime,endTime,todoTitle,todoContent,todoStatus,todoCycle,creator,isLoop,priority) " +
-                    "VALUES(#{id},#{tagId},#{groupId},#{createTime},#{remindTime},#{endTime},#{todoTitle},#{todoContent},#{todoStatus},#{todoCycle},#{creator},#{isLoop},#{priority})")
-    void insertTodo();
+    @Insert("INSERT INTO io_todo(id,tag_id,group_id,start_time,end_time,done_time,remind_time,title,content,status,is_loop,priority,creator,create_time,update_time) " +
+                    "VALUES(#{id},#{tagId},#{groupId},#{startTime},#{endTime},#{doneTime},#{remindTime},#{title},#{content},#{status},#{isLoop},#{priority},#{creator},#{createTime},#{updateTime})")
+    void insertTodo(IoTodo todo);
 
     /**
      * 更新一条todo

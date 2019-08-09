@@ -1,32 +1,96 @@
 package com.iotoast.todo.pojo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
 public class IoTodo {
 
-//    @JsonIgnore
+    /**
+     * ID
+     */
     private String id;
+
+    /**
+     * 标签ID
+     */
     private String tagId;
+
+    /**
+     * 分组ID
+     */
     private String groupId;
+
+    /**
+     * 待办开始时间
+     */
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date startTime;
+
+    /**
+     * 待办结束时间
+     */
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date endTime;
+
+    /**
+     * 完成时间
+     */
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date doneTime;
+
+    /**
+     * 提醒时间
+     */
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date remindTime;
+
+    /**
+     * 待办标题
+     */
     private String title;
+
+    /**
+     * 待办内容
+     */
     private String content;
+
+    /**
+     * 待办状态
+     */
     private String status;
+
+    /**
+     * 是否循环任务
+     */
     private String isLoop;
+
+    /**
+     * 优先级
+     */
     private String priority;
+
+    /**
+     * 创建人
+     */
     private String creator;
+
+    /**
+     * 创建时间
+     */
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date createTime;
+
+    /**
+     * 更新时间
+     */
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date updateTime;
 
