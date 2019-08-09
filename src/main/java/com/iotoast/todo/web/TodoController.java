@@ -5,11 +5,16 @@ import com.iotoast.todo.service.TodoService;
 import com.iotoast.utils.Resource;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+
 import com.iotoast.utils.JSONResult;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -55,6 +60,9 @@ public class TodoController {
      **/
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public JSONResult addTodo(@RequestBody IoTodo todo) {
+
+        todo.setId(UUID.randomUUID().toString().replace("-", "").substring(0, 16));
+
         todoService.insertTodo(todo);
         return JSONResult.ok();
     }
