@@ -1,8 +1,10 @@
 iotoast_service:
-  image: akyakya/iotoast:latest
+  image: akyakya/iotoast-service:latest
   container_name: iotoast
   restart: always
+  ports:
+    - 10000:1990
   volumes:
-    - $(pwd)/app-prod.properties:/code/app-prod.properties
+    - ./app-prod.properties:/code/app-prod.properties
     - /etc/localtime:/etc/localtime:ro
     - /etc/timezone:/etc/timezone:ro

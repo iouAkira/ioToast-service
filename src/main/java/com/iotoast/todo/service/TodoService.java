@@ -14,16 +14,16 @@ public class TodoService implements TodoDao {
 
     @Override
     public IoTodo findTodoById(String id) {
-        return null;
+        return todoDao.findTodoById(id);
     }
-
+    @Override
     public List<IoTodo> findAllTodo() {
         return todoDao.findAllTodo();
     }
 
     @Override
-    public void insertTodo() {
-
+    public void insertTodo(IoTodo todo) {
+        todoDao.insertTodo(todo);
     }
 
     @Override

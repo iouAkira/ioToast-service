@@ -26,5 +26,29 @@ EXPOSE 1990
 
 ENTRYPOINT [ "java", "-jar", "/code/target/iotoast.jar" ]
 ```
+#### Docker-compose Usage
+需要2个文件`docker-compose.yml`、`app-prod.properties`  
+`docker-compose.yml`内容参考如下：
+```
+iotoast_service:
+  image: akyakya/iotoast-service:latest
+  container_name: iotoast
+  restart: always
+  ports:
+    - 10000:1990
+  volumes:
+    - ./app-prod.properties:/code/app-prod.properties
+    - /etc/localtime:/etc/localtime:ro
+    - /etc/timezone:/etc/timezone:ro
+```
+`app-prod.properties` 内容参考`/src/main/resoucres/application.properties`即可
+
+```
+#在当前目录下执行：
+docker-compose up -d 
+```
 #### Docker Usage
-`docker run --name iotoast -p 10000:1990 -d akyakya/iotoast-service`
+需要1个文件`app-prod.properties`配置内容参考`/src/main/resoucres/application.properties`即可
+```
+docker run --name iotoast -p 10000:1990 -v ./app-prod.properties:/code/app-prod.properties -d akyakya/iotoast-service
+```
